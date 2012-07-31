@@ -1,0 +1,17 @@
+{
+  "name": "WhiteBoard",
+  "subdomain": "bharat.WhiteBoard",
+  "scripts": {
+    "start": "whiteboardServer.js"
+  },
+  "version": "0.0.0-9",
+  "engines": {
+    "node": "0.6.x"
+  },
+  "dependencies": {
+    "express": "3.0.0rc1",
+    "mongojs": "0.4.x",
+    "socket.io": "0.9.x",
+    "validator": "0.4.x"
+  }
+}
