@@ -107,7 +107,7 @@ See license.txt for licencing information.
 		</table>
 	</div>
 <div id="chat">
-	<div class="chatContainerHead">Chat
+	<div class="chatContainerHead">Chat-<span id="wbname"></span>
 		<br clear="all">
 	</div>
 	<div id="chatBody">
@@ -115,7 +115,7 @@ See license.txt for licencing information.
 		</ul>
 	</div>
 	<div id="chatTextInput">
-		<textarea id="textAreaChat" style="height:100%;width:100%;"></textarea>
+		<input type="text" id="textAreaChat" style="height:100%;width:100%;"/>
 	</div>
 </div>	
 	<script type="text/javascript">
@@ -176,12 +176,12 @@ See license.txt for licencing information.
 				window.entityUUID = "";
 				
 				
-			while(window.whiteboardname=='')
+			while(!window.whiteboardname)
 			{
-				window.whiteboardname = prompt("Please enter whiteboard name");	
+				window.whiteboardname = prompt("Please enter whiteboard name.\ne.g. test, pune, xyz, abc");	
 			}
 
-			while(window.userName=='')
+			while(!window.userName)
 			{
 				window.userName = prompt("Please enter your name");	
 			}
@@ -198,7 +198,7 @@ See license.txt for licencing information.
 			{
 				window.whiteboardname = window.whiteboardname.split(' ').join('');
 			}
-
+			$('#wbname').text(window.whiteboardname);
 			if(window.userName)
 			{
 				window.userName = window.userName.split(' ').join('');
@@ -308,6 +308,8 @@ See license.txt for licencing information.
 									'message' : sChat
 								});
 								$(this).val('');
+								var chatObj = document.getElementById('chatBody');
+								$('#chatBody').animate({scrollTop : chatObj.scrollHeight},50);
 							}
 							
 						}
