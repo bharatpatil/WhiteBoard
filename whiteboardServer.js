@@ -20,8 +20,8 @@ var server = http.createServer(app);
 	var check = require('validator').check;
     var sanitize = require('validator').sanitize;
     
-var databaseUrl = 'wb1:ganesh123@alex.mongohq.com:10027/whiteboard1';
-//var databaseUrl = "localhost/whiteboard";
+
+var databaseUrl = "localhost/whiteboard";
 var collections = ["whiteboards"];
 
 var db =require("mongojs").connect(databaseUrl,collections);
