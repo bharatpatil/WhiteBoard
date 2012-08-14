@@ -3018,6 +3018,10 @@ SQL.Designer.prototype.toXML = function() {
 	return xml;
 }
 
+/**
+ * Needed for the realtime collaborative nature of the whiteboard
+ */
+
 SQL.Designer.prototype.toXMLForRealtime = function() {
 	var xml = "<?xml version=\"1.0\" encoding=\"utf-8\" ?>\n";
 //	xml += '<!-- SQL XML created by WWW SQL Designer,
@@ -3165,6 +3169,10 @@ SQL.Designer.prototype.fromXML = function(node) {
 		this.addRelation(r1, r2,id);
 	}
 }
+
+/**
+ * Needed for the realtime collaborative nature of the whiteboard
+ */
 
 SQL.Designer.prototype.renderRealtime = function(node) {
 	/**
