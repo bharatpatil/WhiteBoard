@@ -12,6 +12,6 @@
     "express": "3.0.0rc1",
     "mongojs": "0.4.x",
     "socket.io": "0.9.x",
-    "validator": "0.4.x"
+    "validator": "12.0.x"
   }
 }
